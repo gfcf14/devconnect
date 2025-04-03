@@ -10,7 +10,9 @@ public class DevconnectApplication {
 
 	public static void main(String[] args) {
 		Dotenv dotenv = Dotenv.load();
-		System.setProperty("SPRING_DATASOURCE_PASSWORD", dotenv.get("SPRING_DATASOURCE_PASSWORD"));
+		System.setProperty("DB_URL", dotenv.get("DB_URL"));
+		System.setProperty("DB_USER", dotenv.get("DB_USER"));
+		System.setProperty("DB_PASSWORD", dotenv.get("DB_PASSWORD"));
 		SpringApplication.run(DevconnectApplication.class, args);
 	}
 
